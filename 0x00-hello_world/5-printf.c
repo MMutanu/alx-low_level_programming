@@ -6,8 +6,7 @@
  */
 int main(void)
 {
-	char Mystr[] = "\"Programming is like building a multilingual puzzle";
-
+	char Mystr[] = "with proper grammar, but the outcome is a piece of art,";
 	printf(Mystr);
 
 	return (0);

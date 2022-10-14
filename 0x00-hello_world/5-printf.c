@@ -1,4 +1,5 @@
 #include<stdio.h>
+
 /**
  * main - Entry point
  * Description: 'the program's description'
@@ -8,7 +9,8 @@
 int main(void)
 {
 	char Mystr[] = "with proper grammar, but the outcome is a piece of art,";
-	printf(Mystr);
+
+	printf("%s",MyStr);
 
 	return (0);
 

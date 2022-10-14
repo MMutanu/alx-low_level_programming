@@ -2,15 +2,13 @@
 
 /**
  * main - Entry point
- * Description: 'the program's description'
+ * Description: 'using printf to display an output'
  * Return: Always 0 (Success)
  */
 
 int main(void)
 {
-	char Mystr[] = "with proper grammar, but the outcome is a piece of art,";
-
-	printf("%s",MyStr);
+	printf("%s", "with proper grammar, but the outcome is a piece of art,\n");
 
 	return (0);
 

@@ -1,0 +1,1 @@
+for pointers and arrays

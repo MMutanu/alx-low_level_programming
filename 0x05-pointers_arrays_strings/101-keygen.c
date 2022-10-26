@@ -11,7 +11,7 @@ int main ()
 	srand(time(NULL));
 	res = 0;
 	while (res <  2772 - 122) {
-		index = rand() % 86; /* 62 is the length of the array*/
+		index = rand() % 86; /*the length of the array is 62*/
 		res += ascii[index];
 		printf("%c", ascii[index]);
 	}

@@ -1,4 +1,4 @@
-#include <main.h>
+#include "main.h"
 /**
  * digits - Numbers digits of a number
  * @n: Number

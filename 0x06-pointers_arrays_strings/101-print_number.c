@@ -4,29 +4,20 @@
  * @n: Number
  * Return: Digits
  */
-unsigned int digits(unsigned int n)
+void print_number(int n)
 {
-	int i;
-
-	i = 0;
-	while (n != 0)
+	unsigned int num;
+/*check if number is negative*/
+	num = n;
+	if (n < 0)
 	{
-		i++;
-		n /= 10;
+		_putchar(45);
+		num = -n;
 	}
-
-	return (i);
-}
-
-unsigned int pow_x10(unsigned int exponent)
-{
-	unsigned int res, i;
-
-	res = 1;
-	for (i = 1; i < exponent; i++)
+/* print number by recursion*/
+	if (num / 10)
 	{
-		res *= 10;
+		print_number(num / 10);
 	}
-
-	return (res);
+	_putchar((num % 10) + '0');
 }

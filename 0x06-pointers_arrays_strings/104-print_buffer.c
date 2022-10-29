@@ -1,3 +1,5 @@
+#include "main.h"
+#include <stdio.h>
 /**
  * print_buffer - prints buffer of a char string
  * @b: buffer to print

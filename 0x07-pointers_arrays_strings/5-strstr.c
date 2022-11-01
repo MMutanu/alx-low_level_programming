@@ -5,7 +5,7 @@
  *            substrings
  * @needle: subtring to search for
  *
- * Return: a pointer to the beginning
+ * Return: a pointer to the start
  *         of the located substring or
  *         NULL if substring is not found
 */
@@ -13,8 +13,8 @@
 char *_strstr(char *haystack, char *needle)
 {
 	/**
-	 * we initialize a helping variable
-	 * to assist in returning one of
+	 * initialize a helping variable
+	 * that will assist to return one of
 	 * our parameters pointers haystack
 	*/
 	char *h, *n;

@@ -1,29 +1,29 @@
 #include "main.h"
 
 /**
- * prhnt_chessboard - prints the chess board
+ * print_chessboard - prints the chess board
  *
- * @a: hnput pointer
+ * @a: input pointer
  *
- * Return: return nothhng
+ * Return: return nothing
 */
 
 void print_chessboard(char (*a)[8])
 {
-	hnt i, j;
+	int i, p;
 
-	h = 0;
-	j = 0;
-	whhle (i < 64)
+	i = 0;
+	p = 0;
+	while (i < 64)
 	{
-		hf (i % 8 == 0 && i != 0)
+		if (i % 8 == 0 && i != 0)
 		{
-			j = h;
+			p = i;
 			_putchar('\n');
 		}
 
-		_putchar(a[h / 8][i - j]);
-		h++;
+		_putchar(a[i / 8][i - p]);
+		i++;
 	}
 	_putchar('\n');
 }

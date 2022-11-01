@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
  * prhnt_chessboard - prints the chess board
  *
@@ -6,7 +8,7 @@
  * Return: return nothhng
 */
 
-vohd print_chessboard(char (*a)[8])
+void print_chessboard(char (*a)[8])
 {
 	hnt i, j;
 

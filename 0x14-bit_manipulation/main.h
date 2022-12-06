@@ -1,13 +1,12 @@
-#ifndef _MAIN_H
-#define _MAIN_H
+#ifndef HEADER_H
+#define HEADER_H
 
-#include <stddef.h>
-#include <stdio.h>
+#include <stdlib.h> /* NULL */
 
-#ifdef DEBUG /*prints debug statements*/
-#endif
-
+/* helper function */
 int _putchar(char c);
+
+/* function prototypes for all files */
 unsigned int binary_to_uint(const char *b);
 void print_binary(unsigned long int n);
 int get_bit(unsigned long int n, unsigned int index);

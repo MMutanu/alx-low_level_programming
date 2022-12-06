@@ -1,37 +1,65 @@
+#include <stdlib.h>
+#include <stdio.h>
 #include "main.h"
 
 /**
- * binary_to_uint - convert binary to unsigned int
- * @b: binary
- * Return: unsigned int
+ * _pow_recursion - that returns the value of x
+ * raised to the power of y
+ * @x: base number
+ * @y: pow number
+ * Return: int
  */
+
+int _pow_recursion(int x, int y)
+{
+	if (y < 0)
+		return (-1);
+	if (y == 0)
+		return (1);
+	return (x * _pow_recursion(x, y - 1));
+}
+
+/**
+ * _strlen - that returns the length of a string.
+ *
+ * @s: pointer to an string
+ * Return: int
+ */
+
+int _strlen(const char *s)
+{
+	int i = 0;
+
+	while (s[i] != '\0')
+	{
+		i += 1;
+	}
+	return (i);
+}
+
+/**
+ * binary_to_uint - converts a binary number to an unsigned int
+ * @b: pointing to a string of 0 and 1 chars
+ * Return: the converted number, or 0 if
+ * there is one or more chars in the string b that is not 0 or 1
+ * b is NULL
+ */
+
 unsigned int binary_to_uint(const char *b)
 {
-
-	int len = 0, i;
-	unsigned int sum = 0;
+	int len, exp = 0;
+	unsigned int res = 0;
 
 	if (b == NULL)
-		return (sum);
-
-	/* find string length */
-	while (b[len] != '\0')
-		len++;
-	len -= 1;
-
-	/* iterate string and if '1' then multiply by power of 2 */
-	/* get power of 2 via binary (e.g. 1<<2 = 100 in binary = 4) */
-	i = 0;
-	while (b[i])
+		return (0);
+	len = _strlen(b);
+	while (len-- && len >= 0)
 	{
-		if ((b[i] != '0') && (b[i] != '1'))
-			return (sum);
-
-		if (b[i] == '1')
-			sum += (1 * (1 << len));
-		i++;
-		len--;
+		if (b[len] == '1')
+			res += _pow_recursion(2, exp);
+		else if (b[len] != '0')
+			return (0);
+		exp++;
 	}
-
-	return (sum);
+	return (res);
 }
